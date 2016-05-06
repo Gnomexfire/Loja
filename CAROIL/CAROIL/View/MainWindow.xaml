@@ -1,0 +1,51 @@
+﻿<controls:MetroWindow x:Class="CAROIL.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CAROIL"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        mc:Ignorable="d" Loaded="MainWindow_OnLoaded" KeyUp="MainWindow_OnKeyUp"
+        Height="600" Width="800">
+    <Grid>
+        <Canvas x:Name="CanvasMain" HorizontalAlignment="Left" Height="46" Margin="10,26,0,0" VerticalAlignment="Top" Width="772">
+            <Label Content="Numero OS (Ordem Servico)" Canvas.Top="12" FontFamily="Segoe UI"/>
+            <TextBox x:Name="TxtNumOs" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" controls:TextBoxHelper.Watermark="Insira Numero da Ordem Servico . . ." controls:TextBoxHelper.ClearTextButton="True" VerticalAlignment="Top" Width="257" Canvas.Left="163" Canvas.Top="11"/>
+            <Button x:Name="CmdConsulta" Content="Consultar [F1]" Canvas.Left="425" Canvas.Top="11" Width="139" Cursor="Hand"/>
+            <Button x:Name="CmdNova" Click="CmdNova_OnClick" Content="Nova OS (Ordem Servico) [F2]" Canvas.Left="581" Canvas.Top="12" Width="181" Cursor="Hand"/>
+        </Canvas>
+        <Canvas x:Name="CanvasNovaOs" HorizontalAlignment="Left" Height="486" Margin="10,77,0,0" VerticalAlignment="Top" Width="772">
+            <Label Content="Numero OS (Ordem Servico)" Canvas.Top="10" FontFamily="Segoe UI" Canvas.Left="10"/>
+            <TextBox x:Name="TxtBoxNumOs" Height="25" IsReadOnly="True" Canvas.Left="174" TextWrapping="Wrap" Canvas.Top="10" Width="242"/>
+            <Label Content="Data/Hora " Canvas.Top="10" FontFamily="Segoe UI" Canvas.Left="430"/>
+            <Label x:Name="LabelDataHora" Content="22:00 18/04/2016" Canvas.Top="10" FontFamily="Segoe UI" Canvas.Left="499"/>
+            <Label Content="Dados do Cliente" Canvas.Top="56" FontFamily="Segoe UI" Canvas.Left="10"/>
+            <Label Content="Cpf/Cnpj Cliente" Canvas.Top="86" FontFamily="Segoe UI" Canvas.Left="10"/>
+            <TextBox TextChanged="TxtCpfCnpj_OnTextChanged" IsReadOnly="False" x:Name="TxtCpfCnpj" Height="25" Canvas.Left="10" TextWrapping="Wrap" controls:TextBoxHelper.Watermark="Insira Cpf/Cnpj do Cliente" controls:TextBoxHelper.ClearTextButton="True" Canvas.Top="116" Width="241"/>
+            <Button x:Name="CmdConsultaCli" Click="CmdConsultaCli_OnClick" Content="Consultar Cliente(s)" Canvas.Left="112" Canvas.Top="147" Width="139" Cursor="Hand"/>
+            <Label Content="Veiculo Placa" Canvas.Top="207" FontFamily="Segoe UI" Canvas.Left="10"/>
+            <TextBox x:Name="TxtVeiculoPlaca" Height="25" Canvas.Left="10" TextWrapping="Wrap" controls:TextBoxHelper.Watermark="Insira Placa do Veiculo" controls:TextBoxHelper.ClearTextButton="True" Canvas.Top="232" Width="241"/>
+            <Label Content="Dados Ordem Servico" Canvas.Top="56" FontFamily="Segoe UI" Canvas.Left="372"/>
+            <ListView x:Name="ListViewOs" Height="238" Canvas.Left="372" Canvas.Top="116" Width="390">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Label Content="Itens" Canvas.Top="86" FontFamily="Segoe UI" Canvas.Left="372"/>
+            <Label Content="Quilometragem" Canvas.Top="293" FontFamily="Segoe UI" Canvas.Left="10"/>
+            <TextBox x:Name="TxtKm" Height="25" Canvas.Left="10" TextWrapping="Wrap" controls:TextBoxHelper.Watermark="Insira Quilometragem Atual" controls:TextBoxHelper.ClearTextButton="True" Canvas.Top="318" Width="241"/>
+            <Label Content="Total " Canvas.Top="359" FontFamily="Segoe UI" Canvas.Left="372"/>
+            <Label Content="00,00" Canvas.Top="349" Foreground="Red" FontSize="20" FontFamily="Segoe UI" Canvas.Left="414"/>
+            <Label Content="Usuario " Canvas.Top="11" FontFamily="Segoe UI" Canvas.Left="612"/>
+            <Label x:Name="LblUsuario" Canvas.Top="11" FontSize="12" Foreground="Red" FontFamily="Segoe UI" Canvas.Left="667"/>
+            <Button x:Name="CmdFinalizar" Content="Finalizar Os [F10]" Canvas.Left="372" Canvas.Top="391" Width="390" Height="32" Cursor="Hand"/>
+            <Button x:Name="CmdPrevenda" Content="Pre-Venda (Orcamento) [F5]" Canvas.Left="10" Canvas.Top="391" Width="241" Height="32" Cursor="Hand"/>
+            <Button x:Name="CmdRetorna" Click="CmdRetorna_OnClick" Content="Retornar [ESC]" Canvas.Left="601" Canvas.Top="444" Width="161" Height="32" Cursor="Hand"/>
+            <Button Click="CmdConsultaPlaca_OnClick" x:Name="CmdConsultaPlaca" Content="Consultar Veiculo(s)" Canvas.Left="112" Canvas.Top="263" Width="139" Cursor="Hand"/>
+            <Label x:Name="LabelClientNome" Foreground="Red" Content="" Canvas.Top="56" FontFamily="Segoe UI" Canvas.Left="108" Width="230"/>
+        </Canvas>
+
+    </Grid>
+</controls:MetroWindow>

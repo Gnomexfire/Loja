@@ -1,0 +1,38 @@
+﻿<controls:MetroWindow x:Class="CAROIL.View.CliNovo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CAROIL.View"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:forms="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        mc:Ignorable="d"
+        Loaded="CliNovo_OnLoaded" KeyUp="CliNovo_OnKeyUp"                    
+        Height="358.362" Width="568.259">
+    <Grid>
+        <Canvas HorizontalAlignment="Left" Height="334" Margin="10,10,0,0" VerticalAlignment="Top" Width="544">
+            <Label Content="Cpf/Cnpj Cliente" Canvas.Top="10" FontFamily="Segoe UI" Canvas.Left="10"/>
+            <TextBox  IsReadOnly="False" x:Name="TxtCpfCnpj" Height="25" Canvas.Left="10" TextWrapping="Wrap" controls:TextBoxHelper.Watermark="Insira Cpf/Cnpj do Cliente . . ." controls:TextBoxHelper.ClearTextButton="True" Canvas.Top="35" Width="241" TabIndex="0"/>
+            <Label Content="Nome" Canvas.Top="10" FontFamily="Segoe UI" Canvas.Left="291"/>
+            <TextBox IsReadOnly="False" x:Name="TxtNome" Height="25" Canvas.Left="291" TextWrapping="Wrap" controls:TextBoxHelper.Watermark="Insira nome do Cliente . . ." controls:TextBoxHelper.ClearTextButton="True" Canvas.Top="35" Width="241" TabIndex="1"/>
+            <Label Content="Telefone" Canvas.Top="67" FontFamily="Segoe UI" Canvas.Left="10"/>
+            <TextBox IsReadOnly="False" x:Name="TxtTelefone" Height="25" Canvas.Left="10" TextWrapping="Wrap" controls:TextBoxHelper.Watermark="Insira Telefone do Cliente . . ." controls:TextBoxHelper.ClearTextButton="True" Canvas.Top="92" Width="241" TabIndex="2"/>
+            <Label Content="Email" Canvas.Top="67" FontFamily="Segoe UI" Canvas.Left="291"/>
+            <TextBox IsReadOnly="False" x:Name="TxtEmail" Height="25" Canvas.Left="291" TextWrapping="Wrap" controls:TextBoxHelper.Watermark="Insira Email do Cliente . . ." controls:TextBoxHelper.ClearTextButton="True" Canvas.Top="92" Width="241" TabIndex="4"/>
+            <Label Content="Endereco" Canvas.Top="149" FontFamily="Segoe UI" Canvas.Left="10"/>
+            <TextBox IsReadOnly="False" x:Name="TxtEndereco" Height="25" Canvas.Left="10" TextWrapping="Wrap" controls:TextBoxHelper.Watermark="Insira Endereco do Cliente . . ." controls:TextBoxHelper.ClearTextButton="True" Canvas.Top="174" Width="241" TabIndex="5"/>
+            <Label Content="Bairro" Canvas.Top="170" FontFamily="Segoe UI" Canvas.Left="291"/>
+            <TextBox IsReadOnly="False" x:Name="TxtBairro" Height="25" Canvas.Left="291" TextWrapping="Wrap" controls:TextBoxHelper.Watermark="Insira Bairro do Cliente . . ." controls:TextBoxHelper.ClearTextButton="True" Canvas.Top="195" Width="241" TabIndex="6"/>
+            <Label Content="Observacao" Canvas.Top="205" FontFamily="Segoe UI" Canvas.Left="10"/>
+            <TextBox IsReadOnly="False" x:Name="TxtObs" Height="59" Canvas.Left="10" TextWrapping="Wrap" controls:TextBoxHelper.Watermark="Insira Observacao do Cliente . . ." controls:TextBoxHelper.ClearTextButton="True" Canvas.Top="230" Width="522" VerticalScrollBarVisibility="Visible" TabIndex="7"/>
+            <Button Click="CmdExluir_OnClick" x:Name="CmdExluir" Content="[F2] Excluir" Canvas.Left="10" Canvas.Top="294" Width="152" Height="36" TabIndex="9"/>
+            <Button Click="CmdConfirma_OnClick" x:Name="CmdConfirma" Content="[F1] Confirma" Canvas.Left="380" Canvas.Top="294" Width="152" Height="36" TabIndex="8"/>
+            <TextBox IsReadOnly="False" x:Name="TxtCelular" Height="25" Canvas.Left="10" TextWrapping="Wrap" controls:TextBoxHelper.Watermark="Insira Celutar do Cliente . . ." controls:TextBoxHelper.ClearTextButton="True" Canvas.Top="123" Width="241" TabIndex="3"/>
+            <Label Content="Data Nascimento" Canvas.Top="123" FontFamily="Segoe UI" Canvas.Left="291"/>
+            <TextBox  IsReadOnly="False" TextChanged="TxtDataNasc_OnTextChanged" x:Name="TxtDataNasc" Height="25" Canvas.Left="291" TextWrapping="Wrap" controls:TextBoxHelper.Watermark="Insira Data Nascimento do Cliente . . ." controls:TextBoxHelper.ClearTextButton="True" Canvas.Top="144" Width="241" TabIndex="4" MaxLength="10"/>
+            
+            
+        </Canvas>
+
+    </Grid>
+</controls:MetroWindow>

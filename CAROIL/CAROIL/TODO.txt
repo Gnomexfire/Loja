@@ -1,0 +1,31 @@
+﻿Desenvolvedor: Rafael fernandes Motta
+--------------------------------------------
+Loja de troca de oleo de carro
+	- Estoque 
+	- Consulta
+	- OS (Ordem de servico Troca de oleo)
+
+[Estoque]
+Entrada e saida de produtos , consulta excluir e atualizar dados .
+
+[Consulta]
+Consulta de OS (Ordem de Servico) de troca de oleo , por placa do veiculo por Cpf do cliente ou por data .
+
+[OS] 
+(Ordem de servico)
+Ordem de servico para troca de oleo , consulta de OS .
+Pre-Venda (Orcamento) 
+
+
+
+
+
+Tabela
+	Clientes
+	Ordem de servico
+	Servicos (Mao de obra + itens de venda da loja)
+	Prevenda
+	Veiculos
+
+---
+20/04/2016 - Consulta cliente - insert delete update
